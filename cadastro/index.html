@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../estilo/cad-style.css">
+    <link rel="stylesheet" href="../estilo/media-query.css">
+
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <main>
+        <article>
+            <section id="cadastro">
+                <section id="boas_vindas">
+                    
+                </section>
+                <form action="../BackEnd/cadastrar" method="post">
+                    <h2>Cadastro</h2>
+                    <p>Preencha o campos abaixo para se cadastrar.</p>
+            
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <br>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                    <br>
+                    <br>
+                    <div id="mensagem">
+                        
+                    </div>
+            
+                    <br>
+                    <button type="submit">CADASTRAR</button>
+                    <br>
+                    <button onclick="VoltarTelaInicial()" id="butlogin">LOGIN</button>
+                </form>
+            </section>
+        </article>
+
+    </main>
+    
+</body>
+    <script src="../js/email_cad.js"></script>
+    <script>
+        function VoltarTelaInicial() {
+            window.location.href = "../"
+        }
+    </script>
+
+</html>

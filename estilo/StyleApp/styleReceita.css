@@ -1,0 +1,144 @@
+form {
+    display: grid;
+    width: 50%;
+    height: 100%;
+    align-content: center;
+    
+}
+
+
+#areaLancamento {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    background: linear-gradient(to top,#e4e4e4 77%, #025159 30% );
+    justify-content: center;
+    align-items: top;
+}
+
+#lancamento {
+    display: flex;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    background: white;
+    width: 80%;
+    max-width: 1200px;
+    height: 570px;
+    border-radius: 30px;
+}
+
+#lancamento h1 {
+    top: 70;
+    font-size: 22px;
+    margin: 30px 70px;
+}
+
+#lancamento label {
+    color: #025159;
+    font-size: 15px;
+    margin: 0px 70px;
+}
+
+#lancamento input {
+    color: #025159;
+    font-size: 15px;
+    margin: 10px 60px;
+    width: 60%;
+    border: none;
+    background: #e4e4e4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    
+}
+
+input:focus {
+    outline: none;
+    
+}
+
+#lancamento button {
+    border:none;
+    background-color: #025159;
+    width: 30%;
+    height: auto;
+    color: white;
+    font-weight: 500;
+    margin: 10px 60px;
+    border-radius: 20px;
+    cursor: pointer;
+
+
+}
+
+#areaDespesas {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    background: linear-gradient(to top,#e4e4e4 77%, #f28705 30% );
+    justify-content: center;
+    align-items: top;
+}
+
+
+button:hover {
+    scale: 103%;
+    transition: ease-in-out .3s;
+}
+
+::placeholder {
+    color: white;
+}
+
+#data::before {
+    content: attr(placeholder);
+    color: white;
+}
+
+input[type="date"] {
+    color: blue; /* Altere para a cor desejada */
+}
+
+#imgaem {
+    display: flex;
+    width: 60%;
+}
+
+#imgaem img {
+    margin: auto;
+    width: 70%;
+}
+
+form p {
+     
+        width: 60%;
+        margin: 10 70px;
+        color: rgb(78, 78, 78);
+    }
+
+Form > button#mes.abrirMes {
+    background: #025159;
+    width: 60%;
+}
+
+#chekMes {
+    display: none;
+    width: 60%;
+    margin: 10px 60px;
+}
+
+#chekMes p {
+    width: 60%;
+    margin: 10 10px;
+}
+
+#chekMes  input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+#chekMes label {
+    margin: 0;
+}

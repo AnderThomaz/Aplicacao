@@ -1,0 +1,41 @@
+#detalhes button {
+    display: block;
+    text-align: center;
+}
+
+#detalhes button:hover {
+    background: #03a696;
+
+}
+#detalhes h1 {
+    color: rgb(223, 223, 223);
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-bottom: 200px;
+}
+
+span {
+    position: absolute;
+    right: 50;
+    top: 25;
+    scale: 120%;
+    cursor: pointer;
+}
+
+span:hover {
+    scale: 125%;
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+html, body {
+    background-color: white;
+}
+
+#buttom {
+    display: flex;
+}
+    
+#detalhes .titulo {
+    font-weight: 600;
+}

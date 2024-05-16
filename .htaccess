@@ -1,0 +1,15 @@
+
+RewriteEngine On
+RewriteRule ^([0-9A-Za-z-_]+)$ /$1.html
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+Redirect 301 /login /index
+
+

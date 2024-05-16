@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1712261501 source:y:\aula viviane\exercicio 01\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+

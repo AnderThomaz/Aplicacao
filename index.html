@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        <h2>CADASTRO EFETUADO</h2>
+        <button><a href="../"> LOGIN</a></button>
+
+    </div>
+    
+    </div>
+    
+    <div id="modalSenha" class="modal">
+            <div class="modal-content">
+            <h2>SENHA ALTERADA</h2>
+          
+        <button><a href="../"> LOGIN</a></button>
+    </div>
+    </div>
+
+    <main>
+        <article>
+            <section id="login">
+                <section id="img" >
+                    
+                       
+                    
+                </section>
+
+                <form action="BackEnd/login" method="post">
+                <h2>Login</h2>
+
+                <p>Faça Login para acessar sua conta e poder fazer as configurações.</p> 
+                <input type="email" name="email" id="email" placeholder="Seu email" required >
+                <br>
+                <input type="password" name="senha" id="senha" placeholder="Sua senha" required>
+                <div id="mensagem">
+                </div>
+                <p class="esq"><a href="esqueci-senha">Esqueceu a senha?</a></p>
+                <button type="submit">LOGIN</button>
+                <br>
+                <a href="cadastro" id="but_cadastro">CADASTRAR-SE</a>
+            </form>
+            </section>
+        </article>
+
+    </main>   
+    
+</body>
+    <script src="js/login.js"></script>
+    <script src="js/model.js"></script>
+</html>

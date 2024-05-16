@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Datepicker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="tyle.css">
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="datepicker">
+    <div class="datepicker-top">
+      <div class="btn-group">
+        <button class="tag">Today</button>
+        <button class="tag">Tomorrow</button>
+        <button class="tag">In 2 days</button>
+      </div>
+      <div class="month-selector">
+        <button class="arrow"><i class="material-icons">chevron_left</i></button>
+        <span class="month-name">December 2020</span>
+        <button class="arrow"><i class="material-icons">chevron_right</i></button>
+      </div>
+    </div>
+    <div class="datepicker-calendar">
+      <span class="day">Mo</span>
+      <span class="day">Tu</span>
+      <span class="day">We</span>
+      <span class="day">Th</span>
+      <span class="day">Fr</span>
+      <span class="day">Sa</span>
+      <span class="day">Su</span>
+      <button class="date faded">30</button>
+      <button class="date">1</button>
+      <button class="date">2</button>
+      <button class="date">3</button>
+      <button class="date">4</button>
+      <button class="date">5</button>
+      <button class="date">6</button>
+      <button class="date">7</button>
+      <button class="date">8</button>
+      <button class="date current-day">9</button>
+      <button class="date">10</button>
+      <button class="date">11</button>
+      <button class="date">12</button>
+      <button class="date">13</button>
+      <button class="date">14</button>
+      <button class="date">15</button>
+      <button class="date">16</button>
+      <button class="date">17</button>
+      <button class="date">18</button>
+      <button class="date">19</button>
+      <button class="date">20</button>
+      <button class="date">21</button>
+      <button class="date">22</button>
+      <button class="date">23</button>
+      <button class="date">24</button>
+      <button class="date">25</button>
+      <button class="date">26</button>
+      <button class="date">27</button>
+      <button class="date">28</button>
+      <button class="date">29</button>
+      <button class="date">30</button>
+      <button class="date">31</button>
+      <button class="date faded">1</button>
+      <button class="date faded">2</button>
+      <button class="date faded">3</button>
+    </div>
+  </div>
+  <!-- partial -->
+  
+  <script>
+    // Aqui vai o seu script JavaScript
+    // Obtém referências para os elementos relevantes
+    const datepicker = document.querySelector('.datepicker');
+    const monthSelector = datepicker.querySelector('.month-selector');
+    const monthName = monthSelector.querySelector('.month-name');
+    const dateButtons = datepicker.querySelectorAll('.date');
+    const todayButton = datepicker.querySelector('.tag:first-child');
+    const tomorrowButton = datepicker.querySelector('.tag:nth-child(2)');
+    const in2DaysButton = datepicker.querySelector('.tag:nth-child(3)');
+    const prevMonthButton = monthSelector.querySelector('.arrow:first-child');
+    const nextMonthButton = monthSelector.querySelector('.arrow:last-child');
+    
+    // Array de nomes de meses
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    // Função para atualizar o nome do mês
+    function updateMonthName(year, month) {
+        monthName.textContent = `${months[month]} ${year}`;
+    }
+    
+    // Função para atualizar os botões de data
+    function updateDateButtons(year, month) {
+        // Calcula o número de dias no mês atual
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
+        // Atualiza os botões de data visíveis
+        dateButtons.forEach((button, index) => {
+            const day = index + 1;
+            if (day <= daysInMonth) {
+                button.textContent = day;
+                button.classList.remove('faded');
+            } else {
+                button.textContent = day - daysInMonth;
+                button.classList.add('faded');
+            }
+        });
+    }
+    
+    // Função para lidar com a seleção de data
+    function handleDateSelection(event) {
+        const selectedDate = event.target.textContent;
+        if (!selectedDate || event.target.classList.contains('faded')) {
+            return;
+        }
+        // Aqui você pode fazer o que quiser com a data selecionada
+        console.log(`Data selecionada: ${selectedDate} ${monthName.textContent}`);
+    }
+    
+    // Adiciona ouvintes de eventos aos botões de data
+    dateButtons.forEach(button => {
+        button.addEventListener('click', handleDateSelection);
+    });
+    
+    // Adiciona ouvintes de eventos aos botões de seleção de dia
+    todayButton.addEventListener('click', () => {
+        // Aqui você pode definir a data atual como a data selecionada
+        console.log('Hoje foi selecionado.');
+    });
+    
+    tomorrowButton.addEventListener('click', () => {
+        // Aqui você pode definir a data de amanhã como a data selecionada
+        console.log('Amanhã foi selecionado.');
+    });
+    
+    in2DaysButton.addEventListener('click', () => {
+        // Aqui você pode definir a data de depois de amanhã como a data selecionada
+        console.log('Daqui a 2 dias foi selecionado.');
+    });
+    
+    // Adiciona ouvintes de eventos aos botões de mudança de mês
+    prevMonthButton.addEventListener('click', () => {
+        // Aqui você pode implementar a lógica para mudar para o mês anterior
+        console.log('Mês anterior foi selecionado.');
+    });
+    
+    nextMonthButton.addEventListener('click', () => {
+        // Aqui você pode implementar a lógica para mudar para o próximo mês
+        console.log('Próximo mês foi selecionado.');
+    });
+    
+    // Inicialização: exibe o mês atual
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+    updateMonthName(currentYear, currentMonth);
+    updateDateButtons(currentYear, currentMonth);
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+
+#fundo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: linear-gradient(to top,#e4e4e4 77%, #025159 30% );
+    justify-content: center;
+    align-items: top;
+    min-height: calc(100vh - 120px);
+}
+
+
+#dados {
+    margin-top: 130px;
+    width: 80%;
+    max-width: 1500px;
+    height: auto;
+    min-height: 50%;
+    background-color: white;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+#fotoPerfil {
+    border: 2px solid white;
+    width: 210px;
+    height: 210px;
+    margin: -110px auto;
+    border-radius: 50%;
+    background: url(../../app/fotoPerfil/ImgPadrao.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    z-index: -0;
+}
+
+#fotoPerfil span {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: opacity 0.5s ease, visibility 0.3s ease;
+    backdrop-filter: blur(1px);
+    padding: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#fotoPerfil:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu {
+    /* Outras propriedades do menu */
+    z-index: 999; /* Um valor maior do que o z-index do #fotoPerfil */
+}
+
+#inform {
+    transform:translateY(10px);
+    height: 100%;
+    display: grid;
+    align-content: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+#inform > p {
+    color: rgb(114, 114, 114);
+    width: 100%;
+    margin: 10px 70px;
+}
+.dados div {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; 
+    color: white;
+    height: 100%;
+    background-color: #025159;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#inform #titulo {
+    width: 120px;
+}
+
+#inform .dados {
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    width: 35%;
+    height: 40px;
+    background-color: #e4e4e4;
+    margin: 10px 50px;
+    border-radius: 20px;
+    font-size: 15px;
+
+
+}
+#inform .dados > p {
+    margin: 15px 0px 15px 15px;
+    width: 80%;
+    color: rgb(114, 114, 114);
+}
+
+
+#inform .editar {
+    background: none;
+    width: 60px;
+}
+
+
+#inform span {
+    color: #0250597a;
+    cursor: pointer;
+}

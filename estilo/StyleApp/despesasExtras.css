@@ -1,0 +1,36 @@
+header {
+    background-color: #f28705;
+}
+
+#lancamento button {
+    background-color:#f28705 ;
+}
+
+#SelecDespesas {
+    color: white;
+    font-size: 15px;
+    margin: 10px 60px;
+    width: 60%;
+    border: none;
+    background: #e4e4e4;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+#SelecDespesas option{
+    color: #303030;
+    background-color: #e4e4e4;
+
+}
+
+#SelecDespesas optgroup{
+    color: #303030;
+    background-color: #e4e4e4;
+
+    
+}
+
+#chekMes input[checkbox] {
+    margin: 0;
+}

@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+article {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #006663;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#cadastro {
+    display: flex;
+    width: 85%;
+    max-width: 1100px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.452);
+}
+
+#butlogin {
+    background-color: white;
+    border: 1px solid #006663;
+    color: #006663;
+}
+
+
+ #boas_vindas {
+    
+    width: 50%;
+    height: 100%;
+    background: url(../img/login/img.jpg);
+    background-size: cover ;
+    background-position: center center;
+}
+
+
+form {
+    width: 90%;
+    text-align: center;
+}
+
+form > p {
+    font-size: .8rem;
+    margin-top: 10px;
+    margin: 15px;
+    margin-bottom: 20px;
+    
+}
+
+#mensagem {
+    font-size: 0.8rem;
+}
+
+input {
+    width: 80%;
+    border: 1px solid #006663;
+    padding: 15px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    width: 40%;
+    padding: 12px 10px;
+    background:#006663;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom:10px;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+#cadastro {
+    background-color: white;
+    border: 1px solid #006663;
+    
+}
+
+#cadastro a {
+    color:#006663;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+input::placeholder {
+    color: #006663;
+}
+

@@ -1,0 +1,17 @@
+@media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
+
+    #imgre {
+      display: none;
+    }
+
+    #esqueci_senha {
+      width: 100%;
+    }
+
+    #boas_vindas {
+      display: none;
+    }
+  }
